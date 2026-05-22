@@ -1,41 +1,36 @@
-# 🔍 Last Witness
+# 🔍 Last Witness — ⚠️ DEPRECATED
 
-> An AI-powered detective game. You are a private investigator in 1980s Helver City. Suspects are conversational — you ask anything, they answer in character, in real time, powered by Claude. Catch the truth before time runs out.
+> **This project has been halted.** See [DEPRECATED.md](DEPRECATED.md) for the full rationale.
 
-| | |
-|---|---|
-| **Genre** | AI-Driven Narrative Mystery / Detective Sim |
-| **Platforms** | PC (Steam) primary |
-| **Engine** | Unity 2022.3 LTS + URP |
-| **Target frame-rate** | 60 fps integrated GPU (cinematic walking-sim spec) |
-| **Mission 1 scope** | Case 01: *The Vanishing of Reeve Hallam* — 3 suspects, 1 location, 25-40 min |
-| **Designed for** | 6 cases (different locations, escalating complexity) |
-| **AI co-pilot** | **The whole game is the AI co-pilot.** Suspects, Captain (your boss), case files — all Claude-driven. |
+## Short version
 
-## Why this game
+Last Witness was originally pitched (v0.1) as a Claude-powered detective game in the
+*Suck Up!* / Covert Protocol lane: every suspect, the Captain, and the Deduction
+Evaluator were LLM-driven at runtime.
 
-| Signal | Source |
-|---|---|
-| Suck Up! proved LLM-NPC games ship and sell | Going viral on Reddit for unpredictable AI conversation |
-| Inworld AI demos hit AAA scale (Ubisoft, Disney, Xbox) | Big-studio validation |
-| Detective games (Disco Elysium, Obra Dinn) have strong indie precedent | Narrative-first niche is open |
-| Indie narrative games peaked Oct-Dec 2025 in search demand | Timing window |
+In Cycle 4 the studio clarified that **AI is a development workflow tool (Claude Code,
+Claude Agents) — not a runtime gameplay feature**. Of the six titles on the slate,
+five (Hearth & Hex, Ashen Veil, Hollow Quota, Neon Drift Syndicate, Skybound Trials)
+refactored cleanly to hand-authored dialogue. Last Witness could not: the entire game
+loop **is** the LLM.
 
-Details in `docs/01_IDEATION_AND_TRENDS.md`.
+The Critic & Review Board issued a unanimous ❌ **Rejected** verdict (see DEPRECATED.md).
 
-## Quick start
+## What's still here
 
-1. Read `docs/07_UNITY_SETUP_GUIDE.md`.
-2. Unity 2022.3 LTS URP; copy `Assets/_Project/`.
-3. Import: **Dialogue System OpenAI Addon** (adapted to Claude), City Characters Modular Animated, Office Floors, City Pack, Eyes Animator, Cutscene Engine, Bamao Pack GUI, Heat UI, Animation Composer System, Urban Abandoned District — all in your inventory.
-4. `cd server/copilot-proxy && npm install && npm run dev`.
-5. Open `Scenes/Bootstrap.unity`.
+The full v0.1 design is preserved in git history on `main`:
+- 7 design documents under `docs/`
+- All v0.1 C# scripts under `Assets/_Project/Scripts/`
+- The Node copilot proxy under `server/copilot-proxy/`
 
-## Status
+Feel free to fork as a historical reference. **No new development is planned here.**
 
-| Stage | Status |
-|---|---|
-| Concept locked (3 critic cycles) | ✅ |
-| GDD v1.0 approved | ✅ |
-| Architecture & scripts | ✅ |
-| Case 01 authored | ⏳ needs asset import |
+## Where the team's effort goes
+
+The five viable projects continue under the Inventix Games / Abdulmalek-Agents slate:
+
+- 🌻 [hearth-and-hex](https://github.com/Abdulmalek-Agents/hearth-and-hex)
+- ⚔️ [ashen-veil](https://github.com/Abdulmalek-Agents/ashen-veil)
+- 👻 [hollow-quota](https://github.com/Abdulmalek-Agents/hollow-quota)
+- 🏎️ [neon-drift-syndicate](https://github.com/Abdulmalek-Agents/neon-drift-syndicate)
+- 🧗 [skybound-trials](https://github.com/Abdulmalek-Agents/skybound-trials)
